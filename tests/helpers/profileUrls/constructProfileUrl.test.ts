@@ -4,7 +4,7 @@ import invalidPlayerObjects from "../../__testData__/invalidPlayerObjects.json";
 import { PlayerObject } from "../../../src/types";
 
 describe("constructProfileUrl", () => {
-  playerObjects.forEach((playerObject) => {
+  (playerObjects as PlayerObject[]).forEach((playerObject) => {
     it("should match snapshot for valid player object", () => {
       expect(constructProfileUrl(playerObject)).toMatchSnapshot();
     });
@@ -18,13 +18,13 @@ describe("constructProfileUrl", () => {
     });
   });
 
-  playerObjects.forEach((playerObject) => {
+  (playerObjects as PlayerObject[]).forEach((playerObject) => {
     it("should match snapshot for valid player object and valid locale", () => {
       expect(constructProfileUrl(playerObject, "en-us")).toMatchSnapshot();
     });
   });
 
-  playerObjects.forEach((playerObject) => {
+  (playerObjects as PlayerObject[]).forEach((playerObject) => {
     it("should match snapshot for valid player object and invalid locale", () => {
       expect(
         constructProfileUrl(playerObject, "invalidLocale")

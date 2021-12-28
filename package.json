@@ -37,7 +37,7 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "blizzapi": "^2.0.1"
+    "blizzapi": "^2.1.0"
   },
   "devDependencies": {
     "@types/jest": "^27.0.3",
@@ -49,7 +49,6 @@
     "eslint-plugin-import": "^2.25.3",
     "eslint-plugin-jest": "^25.3.2",
     "jest": "^27.4.5",
-    "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
     "rollup": "^2.62.0",
     "rollup-plugin-dts": "^4.1.0",

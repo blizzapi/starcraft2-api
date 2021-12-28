@@ -18,7 +18,7 @@ export const constructProfileUrl = (
       return `https://starcraft2.com/${locale}/profile/${regionId}/${realmId}/${profileId}`;
     }
     return "";
-  } catch (error) {
+  } catch {
     return "";
   }
 };
