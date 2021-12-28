@@ -1,9 +1,10 @@
 import {
   BlizzAPIOptions,
   RegionIdAsNumberOrString,
-} from 'blizzapi';
+  Sc2RealmAsNumberOrString,
+} from "blizzapi";
 
-export interface StarCraft2APIOptions extends BlizzAPIOptions {}
+export type StarCraft2APIOptions = BlizzAPIOptions;
 
 export interface League {
   seasonId: number | string;
@@ -14,7 +15,7 @@ export interface League {
 
 export interface PlayerObject {
   regionId: RegionIdAsNumberOrString;
-  realmId: number | string;
+  realmId: Sc2RealmAsNumberOrString;
   profileId: number | string;
   locale?: string;
 }
