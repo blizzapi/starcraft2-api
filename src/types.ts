@@ -1,7 +1,4 @@
-import {
-  BlizzAPIOptions,
-  RegionIdAsNumberOrString,
-} from 'blizzapi';
+import { BlizzAPIOptions, RegionIdAsNumberOrString } from "blizzapi";
 
 export interface StarCraft2APIOptions extends BlizzAPIOptions {}
 

@@ -3,62 +3,63 @@ import {
   RegionIdAsNumberOrString,
   Locale,
   QueryOptions,
-} from 'blizzapi';
-import * as helpers from '../helpers';
-import {
-  PlayerObject,
-  League,
-} from '../types';
+} from "blizzapi";
+import * as helpers from "../helpers";
+import { PlayerObject, League } from "../types";
 
 export class StarCraft2API extends BlizzAPI {
   queryStaticProfileData(
     regionId: RegionIdAsNumberOrString,
     locale?: Locale,
-    options?: QueryOptions,
+    options?: QueryOptions
   ): Promise<object> {
-    const queryLocale = locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
+    const queryLocale =
+      locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
     return this.query(
       `/sc2/static/profile/${regionId}?locale=${queryLocale}`,
-      options,
+      options
     );
   }
 
   queryProfileMetadata(
     playerObject: PlayerObject,
     locale?: Locale,
-    options?: QueryOptions,
+    options?: QueryOptions
   ): Promise<object> {
     const { regionId, realmId, profileId } = playerObject;
-    const queryLocale = locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
+    const queryLocale =
+      locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
     return this.query(
       `/sc2/metadata/profile/${regionId}/${realmId}/${profileId}?locale=${queryLocale}`,
-      options,
+      options
     );
   }
 
   queryProfile(
     playerObject: PlayerObject,
     locale?: Locale,
-    options?: QueryOptions,
+    options?: QueryOptions
   ): Promise<object> {
     const { regionId, realmId, profileId } = playerObject;
-    const queryLocale = locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
+    const queryLocale =
+      locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
     return this.query(
       `/sc2/profile/${regionId}/${realmId}/${profileId}?locale=${queryLocale}`,
-      options,
+      options
     );
   }
 
   queryLadderSummary(
     playerObject: PlayerObject,
     locale?: Locale,
-    options?: QueryOptions,
+    options?: QueryOptions
   ): Promise<object> {
     const { regionId, realmId, profileId } = playerObject;
-    const queryLocale = locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
+    const queryLocale =
+      locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
     return this.query(
       `/sc2/profile/${regionId}/${realmId}/${profileId}/ladder/summary?locale=${queryLocale}`,
-      options,
+      options
     );
   }
 
@@ -66,123 +67,105 @@ export class StarCraft2API extends BlizzAPI {
     playerObject: PlayerObject,
     ladderId: number | string,
     locale?: Locale,
-    options?: QueryOptions,
+    options?: QueryOptions
   ): Promise<object> {
     const { regionId, realmId, profileId } = playerObject;
-    const queryLocale = locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
+    const queryLocale =
+      locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
     return this.query(
       `/sc2/profile/${regionId}/${realmId}/${profileId}/ladder/${ladderId}?locale=${queryLocale}`,
-      options,
+      options
     );
   }
 
   queryGrandmasterLeaderboard(
     regionId: RegionIdAsNumberOrString,
-    options?: QueryOptions,
+    options?: QueryOptions
   ): Promise<object> {
-    return this.query(
-      `/sc2/ladder/grandmaster/${regionId}`,
-      options,
-    );
+    return this.query(`/sc2/ladder/grandmaster/${regionId}`, options);
   }
 
   queryLeagueData(league: League, options?: QueryOptions): Promise<object> {
-    const {
-      seasonId,
-      queueId,
-      teamType,
-      leagueId,
-    } = league;
+    const { seasonId, queueId, teamType, leagueId } = league;
     return this.query(
       `/data/sc2/league/${seasonId}/${queueId}/${teamType}/${leagueId}`,
-      options,
+      options
     );
   }
 
-  querySeason(regionId: RegionIdAsNumberOrString, options?: QueryOptions): Promise<object> {
-    return this.query(
-      `/sc2/ladder/season/${regionId}`,
-      options,
-    );
+  querySeason(
+    regionId: RegionIdAsNumberOrString,
+    options?: QueryOptions
+  ): Promise<object> {
+    return this.query(`/sc2/ladder/season/${regionId}`, options);
   }
 
-  queryPlayerAccount(accountId: number | string, options?: QueryOptions): Promise<object> {
-    return this.query(
-      `/sc2/player/${accountId}`,
-      options,
-    );
+  queryPlayerAccount(
+    accountId: number | string,
+    options?: QueryOptions
+  ): Promise<object> {
+    return this.query(`/sc2/player/${accountId}`, options);
   }
 
-  queryLegacyProfile(playerObject: PlayerObject, options?: QueryOptions): Promise<object> {
-    const {
-      regionId,
-      realmId,
-      profileId,
-    } = playerObject;
+  queryLegacyProfile(
+    playerObject: PlayerObject,
+    options?: QueryOptions
+  ): Promise<object> {
+    const { regionId, realmId, profileId } = playerObject;
     return this.query(
       `/sc2/legacy/profile/${regionId}/${realmId}/${profileId}`,
-      options,
+      options
     );
   }
 
-  queryLegacyLadders(playerObject: PlayerObject, options?: QueryOptions): Promise<object> {
-    const {
-      regionId,
-      realmId,
-      profileId,
-    } = playerObject;
+  queryLegacyLadders(
+    playerObject: PlayerObject,
+    options?: QueryOptions
+  ): Promise<object> {
+    const { regionId, realmId, profileId } = playerObject;
     return this.query(
       `/sc2/legacy/profile/${regionId}/${realmId}/${profileId}/ladders`,
-      options,
+      options
     );
   }
 
-  queryLegacyMatchHistory(playerObject: PlayerObject, options?: QueryOptions): Promise<object> {
-    const {
-      regionId,
-      realmId,
-      profileId,
-    } = playerObject;
+  queryLegacyMatchHistory(
+    playerObject: PlayerObject,
+    options?: QueryOptions
+  ): Promise<object> {
+    const { regionId, realmId, profileId } = playerObject;
     return this.query(
       `/sc2/legacy/profile/${regionId}/${realmId}/${profileId}/matches`,
-      options,
+      options
     );
   }
 
   queryLegacyLadder(
     regionId: RegionIdAsNumberOrString,
     ladderId: number | string,
-    options?: QueryOptions,
+    options?: QueryOptions
   ): Promise<object> {
-    return this.query(
-      `/sc2/legacy/ladder/${regionId}/${ladderId}`,
-      options,
-    );
+    return this.query(`/sc2/legacy/ladder/${regionId}/${ladderId}`, options);
   }
 
   queryLegacyAchievements(
     regionId: RegionIdAsNumberOrString,
-    options?: QueryOptions,
+    options?: QueryOptions
   ): Promise<object> {
-    return this.query(
-      `/sc2/legacy/data/achievements/${regionId}`,
-      options,
-    );
+    return this.query(`/sc2/legacy/data/achievements/${regionId}`, options);
   }
 
   queryLegacyRewards(
     regionId: RegionIdAsNumberOrString,
-    options?: QueryOptions,
+    options?: QueryOptions
   ): Promise<object> {
-    return this.query(
-      `/sc2/legacy/data/rewards/${regionId}`,
-      options,
-    );
+    return this.query(`/sc2/legacy/data/rewards/${regionId}`, options);
   }
 
   static getAllProfileUrlLocales = helpers.getAllProfileUrlLocales;
 
-  static checkIfProfileUrlLocaleLooksValid = helpers.checkIfProfileUrlLocaleLooksValid;
+  static checkIfProfileUrlLocaleLooksValid =
+    helpers.checkIfProfileUrlLocaleLooksValid;
 
   static validateProfileUrlLocale = helpers.validateProfileUrlLocale;
 

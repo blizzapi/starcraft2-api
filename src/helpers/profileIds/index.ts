@@ -1,1 +1,1 @@
-export { checkIfProfileIdLooksValid } from './checkIfProfileIdLooksValid';
+export { checkIfProfileIdLooksValid } from "./checkIfProfileIdLooksValid";
