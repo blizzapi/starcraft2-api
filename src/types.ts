@@ -1,6 +1,6 @@
 import { BlizzAPIOptions, RegionIdAsNumberOrString } from "blizzapi";
 
-export interface StarCraft2APIOptions extends BlizzAPIOptions {}
+export type StarCraft2APIOptions = BlizzAPIOptions;
 
 export interface League {
   seasonId: number | string;
