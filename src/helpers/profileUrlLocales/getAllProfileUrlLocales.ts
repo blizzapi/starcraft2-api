@@ -1,4 +1,4 @@
-import { PROFILE_URL_LOCALES } from '../../constants';
+import { PROFILE_URL_LOCALES } from "../../constants";
 
 /**
  * Returns a list of all profile URL locales (e.g. 'en-us')

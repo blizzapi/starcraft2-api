@@ -1,5 +1,5 @@
-import { checkIfProfileUrlLocaleLooksValid } from './checkIfProfileUrlLocaleLooksValid';
-import { getAllProfileUrlLocales } from './getAllProfileUrlLocales';
+import { checkIfProfileUrlLocaleLooksValid } from "./checkIfProfileUrlLocaleLooksValid";
+import { getAllProfileUrlLocales } from "./getAllProfileUrlLocales";
 
 /**
  * Validates locale profile URL locale against profile URL locale list
@@ -10,12 +10,15 @@ import { getAllProfileUrlLocales } from './getAllProfileUrlLocales';
  * Throws RangeError if profile URL locale doesn't match regex pattern
  */
 export const validateProfileUrlLocale = (profileUrlLocale: string) => {
-  const isProfileUrlLocaleValid = checkIfProfileUrlLocaleLooksValid(profileUrlLocale);
+  const isProfileUrlLocaleValid =
+    checkIfProfileUrlLocaleLooksValid(profileUrlLocale);
   const availableProfileUrlLocales = getAllProfileUrlLocales();
   const lowerCaseLocale = profileUrlLocale.toLowerCase();
 
   if (!isProfileUrlLocaleValid) {
-    throw new RangeError(`${profileUrlLocale} is not a valid parameter for validateProfileUrlLocale()`);
+    throw new RangeError(
+      `${profileUrlLocale} is not a valid parameter for validateProfileUrlLocale()`
+    );
   }
 
   return availableProfileUrlLocales.includes(lowerCaseLocale);

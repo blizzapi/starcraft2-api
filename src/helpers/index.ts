@@ -1,14 +1,14 @@
-export { checkIfProfileIdLooksValid } from './profileIds';
+export { checkIfProfileIdLooksValid } from "./profileIds";
 export {
   checkIfProfileUrlLocaleLooksValid,
   getAllProfileUrlLocales,
   profileUrlLocaleRegex,
   validateProfileUrlLocale,
-} from './profileUrlLocales';
+} from "./profileUrlLocales";
 export {
   checkIfProfileUrlLooksValid,
   constructProfileUrl,
   profileUrlRegex,
   unpackProfileUrl,
   validateProfileUrl,
-} from './profileUrls';
+} from "./profileUrls";

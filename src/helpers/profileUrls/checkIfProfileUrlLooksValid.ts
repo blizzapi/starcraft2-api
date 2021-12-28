@@ -1,4 +1,4 @@
-import { profileUrlRegex } from './profileUrlRegex';
+import { profileUrlRegex } from "./profileUrlRegex";
 
 /**
  * Verifies whether profile URL locale matches regex pattern
