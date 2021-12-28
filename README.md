@@ -6,8 +6,7 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/p4f467gw2ufh1gub/branch/master?svg=true)](https://ci.appveyor.com/project/lwojcik/starcraft2-api/branch/master)
 [![codecov](https://codecov.io/gh/blizzapi/starcraft2-api/branch/master/graph/badge.svg?token=L8OOti0dKF)](https://codecov.io/gh/blizzapi/starcraft2-api)
 
-Feature-rich library for easy access to [StarCraft II Community APIs](https://develop.battle.net/documentation/starcraft-2/community-apis) and [StarCraft II Game Data APIs](https://develop.battle.net/documentation/starcraft-2/game-data-apis) powered by [BlizzAPI](https://github.com/blizzapi/blizzapi).
-
+Flexible and feature-rich JavaScript / TypeScript library for easy access to [StarCraft II Community APIs](https://develop.battle.net/documentation/starcraft-2/community-apis) and [StarCraft II Game Data APIs](https://develop.battle.net/documentation/starcraft-2/game-data-apis) powered by [BlizzAPI](https://github.com/blizzapi/blizzapi).
 
 ## Install
 
@@ -18,17 +17,17 @@ npm install starcraft2-api
 ## Quick start
 
 ```javascript
-const { StarCraft2API } = require('starcraft2-api');
+const { StarCraft2API } = require("starcraft2-api");
 
 /**
- * Or using TypeScript / ES6 import:
+ * Or using TypeScript:
  * import { StarCraft2API } from 'StarCraft2API';
  */
 
 const sc2api = new StarCraft2API({
-  region: 'us',
-  clientId: 'client id',
-  clientSecret: 'client secret'
+  region: "us",
+  clientId: "client id",
+  clientSecret: "client secret",
 });
 
 const data = await sc2api.queryProfile({
@@ -38,7 +37,7 @@ const data = await sc2api.queryProfile({
 });
 
 console.log(data);
-``` 
+```
 
 ## Manual build
 
@@ -51,10 +50,10 @@ npm run build
 
 ## Documentation & examples
 
-* [starcraft2-api.lukem.net](https://starcraft2-api.lukem.net) - documentation
-* [starcraft2-api-docs](https://github.com/blizzapi/starcraft2-api-docs) - documentation repo on GitHub
-* [starcraft2-api-example](https://github.com/blizzapi/starcraft2-api-example) - sample Express.js REST API with usage examples
-* [Repositories that depend on StarCraft2-API](https://github.com/blizzapi/starcraft2-api/network/dependents)
+- [starcraft2-api.lukem.net](https://starcraft2-api.lukem.net) - documentation
+- [starcraft2-api-docs](https://github.com/blizzapi/starcraft2-api-docs) - documentation repo on GitHub
+- [starcraft2-api-example](https://github.com/blizzapi/starcraft2-api-example) - sample Express.js REST API with usage examples
+- [Repositories that depend on StarCraft2-API](https://github.com/blizzapi/starcraft2-api/network/dependents)
 
 ## Contributions
 
@@ -62,9 +61,9 @@ Contributions of any kind are welcome.
 
 You can contribute to StarCraft2-API by:
 
-* submiting a bug report or a feature suggestion
-* improving documentation either within the project itself or in the [doc site repository](https://github.com/blizzapi/starcraft2-api-docs)
-* submitting pull requests
+- submiting a bug report or a feature suggestion
+- improving documentation either within the project itself or in the [doc site repository](https://github.com/blizzapi/starcraft2-api-docs)
+- submitting pull requests
 
 Before contributing be sure to read [Contributing Guidelines](https://github.com/blizzapi/starcraft2-api/blob/master/CONTRIBUTING.md) and [Code of Conduct](https://github.com/blizzapi/starcraft2-api/blob/master/CODE_OF_CONDUCT.md).
 
