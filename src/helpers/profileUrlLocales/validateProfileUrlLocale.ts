@@ -1,3 +1,4 @@
+import { ProfileUrlLocale } from "../../types";
 import { checkIfProfileUrlLocaleLooksValid } from "./checkIfProfileUrlLocaleLooksValid";
 import { getAllProfileUrlLocales } from "./getAllProfileUrlLocales";
 
@@ -13,7 +14,7 @@ export const validateProfileUrlLocale = (profileUrlLocale: string) => {
   const isProfileUrlLocaleValid =
     checkIfProfileUrlLocaleLooksValid(profileUrlLocale);
   const availableProfileUrlLocales = getAllProfileUrlLocales();
-  const lowerCaseLocale = profileUrlLocale.toLowerCase();
+  const lowerCaseLocale = profileUrlLocale.toLowerCase() as ProfileUrlLocale;
 
   if (!isProfileUrlLocaleValid) {
     throw new RangeError(

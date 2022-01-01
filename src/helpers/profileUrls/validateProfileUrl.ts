@@ -2,7 +2,7 @@ import { BlizzAPI } from "blizzapi";
 import { checkIfProfileIdLooksValid } from "../profileIds/checkIfProfileIdLooksValid";
 import { validateProfileUrlLocale } from "../profileUrlLocales/validateProfileUrlLocale";
 import { unpackProfileUrl } from "./unpackProfileUrl";
-import { PlayerObject } from "../../types";
+import { PlayerObject, ProfileUrlLocale } from "../../types";
 
 export const validateProfileUrl = (url: string, includeLocale?: boolean) => {
   const profileObject = unpackProfileUrl(url, includeLocale) as PlayerObject;
@@ -16,7 +16,7 @@ export const validateProfileUrl = (url: string, includeLocale?: boolean) => {
   const { regionId, realmId, profileId } = profileObject;
 
   const localeName = includeLocale
-    ? (profileObject as PlayerObject & { locale: string }).locale
+    ? (profileObject as PlayerObject & { locale: ProfileUrlLocale }).locale
     : undefined;
 
   const validRegionId = BlizzAPI.validateRegionId(regionId);

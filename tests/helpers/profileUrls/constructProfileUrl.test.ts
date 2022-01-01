@@ -1,7 +1,7 @@
 import { constructProfileUrl } from "../../../src/helpers/profileUrls/constructProfileUrl";
 import playerObjects from "../../__testData__/playerObjects.json";
 import invalidPlayerObjects from "../../__testData__/invalidPlayerObjects.json";
-import { PlayerObject } from "../../../src/types";
+import { PlayerObject, ProfileUrlLocale } from "../../../src/types";
 
 describe("constructProfileUrl", () => {
   (playerObjects as PlayerObject[]).forEach((playerObject) => {
@@ -20,14 +20,16 @@ describe("constructProfileUrl", () => {
 
   (playerObjects as PlayerObject[]).forEach((playerObject) => {
     it("should match snapshot for valid player object and valid locale", () => {
-      expect(constructProfileUrl(playerObject, "en-us")).toMatchSnapshot();
+      expect(
+        constructProfileUrl(playerObject, "en-us" as ProfileUrlLocale)
+      ).toMatchSnapshot();
     });
   });
 
   (playerObjects as PlayerObject[]).forEach((playerObject) => {
     it("should match snapshot for valid player object and invalid locale", () => {
       expect(
-        constructProfileUrl(playerObject, "invalidLocale")
+        constructProfileUrl(playerObject, "invalidLocale" as ProfileUrlLocale)
       ).toMatchSnapshot();
     });
   });
