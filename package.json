@@ -5,7 +5,7 @@
   "homepage": "https://starcraft2-api.lukem.net",
   "main": "./dist/index.js",
   "module": "dist/index.mjs",
-  "browser": "dist/index.umd.js",
+  "browser": "dist/index.js",
   "typings": "dist/index.d.ts",
   "author": {
     "name": "BlizzAPI + Contributors",
