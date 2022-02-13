@@ -44,8 +44,8 @@
   },
   "lint-staged": {
     "package.json": "sort-package-json",
-    "*.ts": "eslint --cache --fix",
-    "*.js": "prettier --write"
+    "*.{js,jsx,ts,tsx}": "eslint --cache --fix",
+    "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write"
   },
   "dependencies": {
     "blizzapi": "^2.1.0"
