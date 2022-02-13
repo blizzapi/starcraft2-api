@@ -37,14 +37,16 @@
     "compile": "rollup -c",
     "dev": "tsc -w --project tsconfig.json",
     "format": "prettier --write",
-    "lint": "eslint . --ext .ts",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "lint:fixCached": "eslint --cache --fix",
     "prepare": "husky install",
     "prepublishOnly": "npm run build",
     "test": "jest"
   },
   "lint-staged": {
     "package.json": "sort-package-json",
-    "*.{js,jsx,ts,tsx}": "npm run lint",
+    "*.{js,jsx,ts,tsx}": "npm run lint:fixCached",
     "*.{js,jsx,ts,tsx,md,html,css}": "npm run format"
   },
   "dependencies": {

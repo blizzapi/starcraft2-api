@@ -2,6 +2,7 @@ import dts from "rollup-plugin-dts";
 import esbuild from "rollup-plugin-esbuild";
 import externalGlobals from "rollup-plugin-external-globals";
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const name = require("./package.json").main.replace(/\.js$/, "");
 
 const bundle = (config) => ({
@@ -10,6 +11,7 @@ const bundle = (config) => ({
   external: (id) => !/^[./]/.test(id),
 });
 
+// eslint-disable-next-line import/no-default-export
 export default [
   bundle({
     plugins: [
