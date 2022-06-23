@@ -53,7 +53,7 @@
     "blizzapi": "^2.1.0"
   },
   "devDependencies": {
-    "@types/jest": "^27.0.3",
+    "@types/jest": "^28.1.0",
     "@types/node": "^17.0.5",
     "esbuild": "^0.14.8",
     "eslint": "^8.5.0",
