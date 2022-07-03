@@ -30,7 +30,7 @@
   "browser": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "build": "npm run lint && npm run checkFormat && npm run test && npm run clean && npm run compile",
+    "build": "npm run lint && npm run checkFormat && npm run test:cov && npm run clean && npm run compile",
     "checkFormat": "prettier --check .",
     "clean": "rimraf dist",
     "clearTestCache": "jest --clearCache",
