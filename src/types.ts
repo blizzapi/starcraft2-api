@@ -4,18 +4,11 @@ import {
   Sc2RealmAsNumberOrString,
 } from "blizzapi";
 
-export {
-  RegionId,
-  RegionIdAsString,
-  RegionIdAsNumberOrString,
-  RegionName,
-  Locale,
-  Sc2Realm,
-  Sc2RealmAsNumberOrString,
-  RegionIdOrName,
-} from "blizzapi";
+export * from "blizzapi";
 
-export type StarCraft2APIOptions = BlizzAPIOptions;
+export interface StarCraft2APIOptions extends BlizzAPIOptions {
+  timeoutMs?: number;
+}
 
 export enum QueueIdAsNumber {
   WoL1v1 = 1,
