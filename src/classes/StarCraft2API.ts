@@ -5,9 +5,16 @@ import {
   QueryOptions,
 } from "blizzapi";
 import * as helpers from "../helpers";
-import { PlayerObject, League } from "../types";
+import { PlayerObject, League, StarCraft2APIOptions } from "../types";
 
 export class StarCraft2API extends BlizzAPI {
+  private timeoutMs: number;
+
+  constructor(options: StarCraft2APIOptions) {
+    super(options);
+    this.timeoutMs = options.timeoutMs || 10000;
+  }
+
   queryStaticProfileData(
     regionId: RegionIdAsNumberOrString,
     locale?: Locale,
@@ -15,10 +22,10 @@ export class StarCraft2API extends BlizzAPI {
   ): Promise<object> {
     const queryLocale =
       locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
-    return this.query(
-      `/sc2/static/profile/${regionId}?locale=${queryLocale}`,
-      options
-    );
+    return this.query(`/sc2/static/profile/${regionId}?locale=${queryLocale}`, {
+      timeout: this.timeoutMs,
+      ...options,
+    });
   }
 
   queryProfileMetadata(
@@ -31,7 +38,10 @@ export class StarCraft2API extends BlizzAPI {
       locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
     return this.query(
       `/sc2/metadata/profile/${regionId}/${realmId}/${profileId}?locale=${queryLocale}`,
-      options
+      {
+        timeout: this.timeoutMs,
+        ...options,
+      }
     );
   }
 
@@ -45,7 +55,10 @@ export class StarCraft2API extends BlizzAPI {
       locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
     return this.query(
       `/sc2/profile/${regionId}/${realmId}/${profileId}?locale=${queryLocale}`,
-      options
+      {
+        timeout: this.timeoutMs,
+        ...options,
+      }
     );
   }
 
@@ -59,7 +72,10 @@ export class StarCraft2API extends BlizzAPI {
       locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
     return this.query(
       `/sc2/profile/${regionId}/${realmId}/${profileId}/ladder/summary?locale=${queryLocale}`,
-      options
+      {
+        timeout: this.timeoutMs,
+        ...options,
+      }
     );
   }
 
@@ -74,7 +90,10 @@ export class StarCraft2API extends BlizzAPI {
       locale || BlizzAPI.getDefaultLocaleNameForRegionId(regionId);
     return this.query(
       `/sc2/profile/${regionId}/${realmId}/${profileId}/ladder/${ladderId}?locale=${queryLocale}`,
-      options
+      {
+        timeout: this.timeoutMs,
+        ...options,
+      }
     );
   }
 
@@ -82,14 +101,20 @@ export class StarCraft2API extends BlizzAPI {
     regionId: RegionIdAsNumberOrString,
     options?: QueryOptions
   ): Promise<object> {
-    return this.query(`/sc2/ladder/grandmaster/${regionId}`, options);
+    return this.query(`/sc2/ladder/grandmaster/${regionId}`, {
+      timeout: this.timeoutMs,
+      ...options,
+    });
   }
 
   queryLeagueData(league: League, options?: QueryOptions): Promise<object> {
     const { seasonId, queueId, teamType, leagueId } = league;
     return this.query(
       `/data/sc2/league/${seasonId}/${queueId}/${teamType}/${leagueId}`,
-      options
+      {
+        timeout: this.timeoutMs,
+        ...options,
+      }
     );
   }
 
@@ -97,14 +122,20 @@ export class StarCraft2API extends BlizzAPI {
     regionId: RegionIdAsNumberOrString,
     options?: QueryOptions
   ): Promise<object> {
-    return this.query(`/sc2/ladder/season/${regionId}`, options);
+    return this.query(`/sc2/ladder/season/${regionId}`, {
+      timeout: this.timeoutMs,
+      ...options,
+    });
   }
 
   queryPlayerAccount(
     accountId: number | string,
     options?: QueryOptions
   ): Promise<object> {
-    return this.query(`/sc2/player/${accountId}`, options);
+    return this.query(`/sc2/player/${accountId}`, {
+      timeout: this.timeoutMs,
+      ...options,
+    });
   }
 
   queryLegacyProfile(
@@ -114,7 +145,10 @@ export class StarCraft2API extends BlizzAPI {
     const { regionId, realmId, profileId } = playerObject;
     return this.query(
       `/sc2/legacy/profile/${regionId}/${realmId}/${profileId}`,
-      options
+      {
+        timeout: this.timeoutMs,
+        ...options,
+      }
     );
   }
 
@@ -125,7 +159,10 @@ export class StarCraft2API extends BlizzAPI {
     const { regionId, realmId, profileId } = playerObject;
     return this.query(
       `/sc2/legacy/profile/${regionId}/${realmId}/${profileId}/ladders`,
-      options
+      {
+        timeout: this.timeoutMs,
+        ...options,
+      }
     );
   }
 
@@ -136,7 +173,10 @@ export class StarCraft2API extends BlizzAPI {
     const { regionId, realmId, profileId } = playerObject;
     return this.query(
       `/sc2/legacy/profile/${regionId}/${realmId}/${profileId}/matches`,
-      options
+      {
+        timeout: this.timeoutMs,
+        ...options,
+      }
     );
   }
 
@@ -145,21 +185,30 @@ export class StarCraft2API extends BlizzAPI {
     ladderId: number | string,
     options?: QueryOptions
   ): Promise<object> {
-    return this.query(`/sc2/legacy/ladder/${regionId}/${ladderId}`, options);
+    return this.query(`/sc2/legacy/ladder/${regionId}/${ladderId}`, {
+      timeout: this.timeoutMs,
+      ...options,
+    });
   }
 
   queryLegacyAchievements(
     regionId: RegionIdAsNumberOrString,
     options?: QueryOptions
   ): Promise<object> {
-    return this.query(`/sc2/legacy/data/achievements/${regionId}`, options);
+    return this.query(`/sc2/legacy/data/achievements/${regionId}`, {
+      timeout: this.timeoutMs,
+      ...options,
+    });
   }
 
   queryLegacyRewards(
     regionId: RegionIdAsNumberOrString,
     options?: QueryOptions
   ): Promise<object> {
-    return this.query(`/sc2/legacy/data/rewards/${regionId}`, options);
+    return this.query(`/sc2/legacy/data/rewards/${regionId}`, {
+      timeout: this.timeoutMs,
+      ...options,
+    });
   }
 
   static getAllProfileUrlLocales = helpers.getAllProfileUrlLocales;
