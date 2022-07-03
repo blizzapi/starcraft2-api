@@ -1,4 +1,3 @@
-import { RegionIdOrName } from "blizzapi";
 import { StarCraft2API } from "../../src/classes/StarCraft2API";
 
 describe("StarCraft2API", () => {
@@ -96,7 +95,7 @@ describe("StarCraft2API", () => {
   ];
 
   const sc2api = new StarCraft2API({
-    region: "us" as RegionIdOrName,
+    region: "us",
     clientId: "sample_client_id",
     clientSecret: "sample_client_secret",
   });
