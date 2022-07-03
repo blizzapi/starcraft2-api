@@ -16,4 +16,5 @@ CONTRIBUTING.md
 .eslintrc.js
 .husky
 .eslintignore
+.prettierignore
 rollup.config.js
