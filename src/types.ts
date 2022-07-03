@@ -4,7 +4,20 @@ import {
   Sc2RealmAsNumberOrString,
 } from "blizzapi";
 
-export * from "blizzapi";
+export {
+  RegionId,
+  RegionIdAsString,
+  RegionIdAsNumberOrString,
+  RegionName,
+  Sc2RealmAsNumberOrString,
+  RegionIdOrName,
+  RegionIdEnum,
+  RegionNameEnum,
+  RegionIdAsStringEnum,
+  DefaultLocaleIndex,
+  Locale,
+  Sc2Realm,
+} from "blizzapi";
 
 export interface StarCraft2APIOptions extends BlizzAPIOptions {
   timeoutMs?: number;
