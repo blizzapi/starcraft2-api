@@ -9,10 +9,14 @@ export {
   RegionIdAsString,
   RegionIdAsNumberOrString,
   RegionName,
-  Locale,
-  Sc2Realm,
   Sc2RealmAsNumberOrString,
   RegionIdOrName,
+  RegionIdEnum,
+  RegionNameEnum,
+  RegionIdAsStringEnum,
+  DefaultLocaleIndex,
+  Locale,
+  Sc2Realm,
 } from "blizzapi";
 
 export type StarCraft2APIOptions = BlizzAPIOptions;
