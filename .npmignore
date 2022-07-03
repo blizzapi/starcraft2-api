@@ -13,5 +13,7 @@ AUTHORS
 CODE_OF_CONDUCT.md
 CONTRIBUTING.md
 .eslintrc
+.eslintrc.js
+.husky
 .eslintignore
 rollup.config.js
