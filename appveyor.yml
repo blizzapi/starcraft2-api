@@ -3,7 +3,7 @@ platform: x64
 stack: node lts/*
 
 install:
-  - npm install
+  - npm install --ignore-scripts
 
 build_script:
   - npm run build
