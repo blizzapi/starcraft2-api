@@ -51,7 +51,7 @@
     "*.{js,jsx,ts,tsx,md,html,css}": "npm run format"
   },
   "dependencies": {
-    "blizzapi": "^2.2.1"
+    "blizzapi": "^2.3.0"
   },
   "devDependencies": {
     "@types/jest": "^28.1.4",
