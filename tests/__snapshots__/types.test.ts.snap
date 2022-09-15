@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`types should be defined 1`] = `
-Object {
-  "DefaultLocaleIndex": Object {
+{
+  "DefaultLocaleIndex": {
     "0": "cn",
     "cn": 0,
     "eu": 0,
@@ -10,7 +10,7 @@ Object {
     "tw": 0,
     "us": 0,
   },
-  "LeagueIdAsNumber": Object {
+  "LeagueIdAsNumber": {
     "0": "Bronze",
     "1": "Silver",
     "2": "Gold",
@@ -26,7 +26,7 @@ Object {
     "Platinum": 3,
     "Silver": 1,
   },
-  "LeagueIdAsString": Object {
+  "LeagueIdAsString": {
     "Bronze": "0",
     "Diamond": "4",
     "Gold": "2",
@@ -35,7 +35,7 @@ Object {
     "Platinum": "3",
     "Silver": "1",
   },
-  "Locale": Object {
+  "Locale": {
     "de_DE": "de_DE",
     "en_GB": "en_GB",
     "en_US": "en_US",
@@ -50,7 +50,7 @@ Object {
     "zh_CN": "zh_CN",
     "zh_TW": "zh_TW",
   },
-  "ProfileUrlLocale": Object {
+  "ProfileUrlLocale": {
     "DeDe": "de-de",
     "EnGb": "en-gb",
     "EnUs": "en-us",
@@ -62,7 +62,7 @@ Object {
     "PtBr": "pt-br",
     "RuRu": "ru-ru",
   },
-  "QueueIdAsNumber": Object {
+  "QueueIdAsNumber": {
     "1": "WoL1v1",
     "101": "HotS1v1",
     "102": "HotS2v2",
@@ -90,7 +90,7 @@ Object {
     "WoL3v3": 3,
     "WoL4v4": 4,
   },
-  "QueueIdAsString": Object {
+  "QueueIdAsString": {
     "HotS1v1": "101",
     "HotS2v2": "102",
     "HotS3v3": "103",
@@ -105,14 +105,14 @@ Object {
     "WoL3v3": "3",
     "WoL4v4": "4",
   },
-  "RegionIdAsStringEnum": Object {
+  "RegionIdAsStringEnum": {
     "cn": "5",
     "eu": "2",
     "kr": "3",
     "tw": "3",
     "us": "1",
   },
-  "RegionIdEnum": Object {
+  "RegionIdEnum": {
     "1": "us",
     "2": "eu",
     "3": "tw",
@@ -123,14 +123,14 @@ Object {
     "tw": 3,
     "us": 1,
   },
-  "RegionNameEnum": Object {
+  "RegionNameEnum": {
     "cn": "cn",
     "eu": "eu",
     "kr": "kr",
     "tw": "tw",
     "us": "us",
   },
-  "Sc2Realm": Object {
+  "Sc2Realm": {
     "1": "China",
     "2": "Taiwan",
     "China": 1,
@@ -141,13 +141,13 @@ Object {
     "Taiwan": 2,
     "US": 1,
   },
-  "TeamTypeAsNumber": Object {
+  "TeamTypeAsNumber": {
     "0": "Arranged",
     "1": "Random",
     "Arranged": 0,
     "Random": 1,
   },
-  "TeamTypeAsString": Object {
+  "TeamTypeAsString": {
     "Arranged": "0",
     "Random": "1",
   },
