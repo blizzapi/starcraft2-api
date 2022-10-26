@@ -1,6 +1,6 @@
 {
   "name": "starcraft2-api",
-  "version": "2.4.1",
+  "version": "2.4.2",
   "description": "Flexible and feature-rich library for StarCraft II Community and Game Data APIs",
   "keywords": [
     "starcraft",
