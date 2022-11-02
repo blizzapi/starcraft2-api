@@ -65,7 +65,7 @@
     "prettier": "^2.7.1",
     "rimraf": "^3.0.2",
     "rollup": "^3.0.0",
-    "rollup-plugin-dts": "^4.2.2",
+    "rollup-plugin-dts": "^5.0.0",
     "rollup-plugin-esbuild": "^4.10.1",
     "rollup-plugin-external-globals": "^0.6.1",
     "sort-package-json": "^2.0.0",
