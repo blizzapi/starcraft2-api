@@ -43,12 +43,12 @@ pull_request_rules:
     actions:
       comment:
         message: This pull request is now in conflicts. Could you fix it @{{author}}? 🙏 cc @lwojcik
-  - name: Automatic merge of owner-made PRs for master when CI passes and owner approves
+  - name: Automatic merge of owner-made PRs for main when CI passes and owner approves
     conditions:
       - status-success=continuous-integration/appveyor/branch
       - status-success=continuous-integration/appveyor/pr
       - author=lwojcik
-      - base=master
+      - base=main
       - -conflict
       - label!=work-in-progress
       - label=ready-to-merge
@@ -56,7 +56,7 @@ pull_request_rules:
       queue:
         method: squash
         name: default
-  - name: Automatic merge of PRs for master when CI passes and owner approves
+  - name: Automatic merge of PRs for main when CI passes and owner approves
     conditions:
       - status-success=continuous-integration/appveyor/branch
       - status-success=continuous-integration/appveyor/pr
@@ -64,7 +64,7 @@ pull_request_rules:
       - author!=snyk-bot
       - author!=dependabot[bot]
       - -conflict
-      - base=master
+      - base=main
       - label!=work-in-progress
       - approved-reviews-by=lwojcik
       - label=ready-to-merge
