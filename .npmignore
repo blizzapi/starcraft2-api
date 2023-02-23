@@ -19,3 +19,4 @@ CONTRIBUTING.md
 .eslintignore
 .prettierignore
 rollup.config.js
+rollup.config.mjs
