@@ -1,6 +1,6 @@
 # StarCraft2-API
 
-> **This project is no longer maintained or updated. While Battle.net API has been reasonably stable within last few years and that means the library should theoretically continue working for a while, I am no longer able to provide any support or maintenance.** > **In case of bugs or breaking changes, feel free to fork the repo and publish your own updated version.**
+> **This project is no longer maintained or updated. While Battle.net API has been reasonably stable within last few years and that means the library should theoretically continue working for a while, I am no longer able to provide any support or maintenance. In case of bugs or breaking changes, feel free to fork the repo and publish your own updated version.**
 
 Flexible and feature-rich JavaScript / TypeScript library for easy access to StarCraft II Community APIs.
 
