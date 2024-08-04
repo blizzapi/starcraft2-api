@@ -2,29 +2,6 @@
   "name": "starcraft2-api",
   "version": "2.5.6",
   "description": "Flexible and feature-rich library for StarCraft II Community and Game Data APIs",
-  "keywords": [
-    "starcraft",
-    "starcraft2",
-    "sc2",
-    "api",
-    "blizzard",
-    "battlenet",
-    "battle-net",
-    "battle-net-api"
-  ],
-  "homepage": "https://starcraft2-api.lukem.net",
-  "bugs": {
-    "url": "https://github.com/blizzapi/starcraft2-api/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/blizzapi/starcraft2-api.git"
-  },
-  "license": "MIT",
-  "author": {
-    "name": "BlizzAPI + Contributors",
-    "url": "https://github.com/blizzapi"
-  },
   "main": "./dist/index.js",
   "module": "dist/index.mjs",
   "browser": "dist/index.js",
@@ -78,11 +55,5 @@
     "sort-package-json": "^2.10.0",
     "ts-jest": "^29.2.4",
     "typescript": "^5.5.4"
-  },
-  "licenses": [
-    {
-      "type": "MIT",
-      "url": "https://github.com/blizzapi/starcraft2-api/blob/master/LICENSE"
-    }
-  ]
+  }
 }
