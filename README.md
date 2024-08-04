@@ -73,10 +73,6 @@ To all who contribute code, improve documentation, submit issues or feature requ
 
 We maintain an [AUTHORS](https://github.com/blizzapi/starcraft2-api/blob/master/AUTHORS) file where we keep a list of all project contributors. Please consider adding your name there with your next PR.
 
-## License
-
-Licensed under MIT License. See [LICENSE](https://github.com/blizzapi/starcraft2-api/blob/master/LICENSE) for more information.
-
 ## Legal
 
 This project is not authored, affiliated or endorsed in any way by Blizzard Entertainment.
